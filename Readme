@@ -71,8 +71,8 @@ Python 3.7 or higher
 pip
 
 Installation
-bash# 1. Clone the repository
-git clone https://github.com/AbhiramSharma/AI-Interview-Simulator.git
+bash# 1. repository
+
 cd AI-Interview-Simulator
 
 # 2. Install dependencies
