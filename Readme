@@ -1,5 +1,7 @@
 🤖 AI Interview Simulator
---------------------------
+https://img.shields.io/badge/python-3.7+-blue
+https://img.shields.io/badge/License-MIT-yellow
+
 A resume-aware interview preparation tool that generates personalized technical questions from your actual background — not generic question banks.
 
 📌 Project Overview
