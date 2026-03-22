@@ -1,0 +1,129 @@
+🤖 AI Interview Simulator
+--------------------------
+A resume-aware interview preparation tool that generates personalized technical questions from your actual background — not generic question banks.
+
+📌 Project Overview
+---------------------
+The AI Interview Simulator is a Python-based web application designed to help job seekers practice interviews in a realistic, personalized way. Unlike conventional mock-interview tools that serve pre-written questions, this simulator reads your resume and generates questions that are directly relevant to your skills, projects, and experience.
+The project addresses a common pain point: candidates preparing for interviews often practice with generic questions that don't reflect what they'll actually be asked. This tool closes that gap by making preparation targeted and efficient.
+
+🎯 Problem Statement
+----------------------
+Most interview prep tools rely on static question banks. This means:
+
+Candidates practice questions irrelevant to their background
+Behavioral and project-specific questions go unpracticed
+There's no dynamic adaptation to what a candidate has actually built or done
+
+Solution: Parse the candidate's resume, extract meaningful signals (skills, projects, roles), and generate tailored questions on-the-fly for a realistic interview simulation.
+
+⚙️ How It Works
+----------------
+User uploads Resume (PDF / TXT)
+        ↓
+Resume Parser extracts:
+  - Technical Skills
+  - Projects & Descriptions
+  - Work Experience
+        ↓
+Interview Engine generates:
+  - Technical questions (based on skills)
+  - Project-specific questions
+  - Behavioral questions
+        ↓
+Streamlit UI presents questions one-by-one
+        ↓
+User answers → Receives immediate feedback
+
+🛠️ Tech Stack
+----------------
+LayerTechnologyPurposeFrontend / UIStreamlitInteractive web interface, no HTML/CSS neededBackend LogicPython 3.7+Resume parsing, question generation enginePDF ParsingPyPDF2Extracting text from uploaded PDF resumesFile HandlingPython io / osSupporting TXT and PDF resume formats
+
+🗂️ Project Structure
+AI-Interview-Simulator/
+│
+├── app.py                  # Main Streamlit app — UI and user flow
+├── resume_parser.py        # Parses PDF/TXT resumes; extracts skills, projects, experience
+├── interview_engine.py     # Core question generation logic
+└── README.md               # Project documentation
+
+Module Responsibilities
+-----------------------
+app.py — Handles the entire user interface. Manages file upload, session state, and question presentation flow using Streamlit widgets.
+resume_parser.py — The intelligence layer for document understanding. Reads raw resume text and extracts structured data: skills lists, project titles and descriptions, job roles, and durations.
+interview_engine.py — Takes the parsed resume data and generates contextual questions across three categories: technical depth questions (based on listed skills), project walkthrough questions (based on described projects), and behavioral questions (based on work history).
+
+
+✨ Key Features
+-----------------
+Resume Upload — Accepts both .pdf and .txt resume formats for broad compatibility.
+Intelligent Parsing — Extracts skills, projects, and experience from unstructured resume text.
+Personalized Questions — All questions are derived from the candidate's actual resume content.
+Realistic Simulation — Questions are presented one at a time, mimicking a real interview format.
+Immediate Feedback — Candidates receive basic feedback after each response to reinforce learning.
+
+
+🚀 Getting Started
+Prerequisites
+
+Python 3.7 or higher
+pip
+
+Installation
+bash# 1. Clone the repository
+git clone https://github.com/AbhiramSharma/AI-Interview-Simulator.git
+cd AI-Interview-Simulator
+
+# 2. Install dependencies
+pip install streamlit PyPDF2
+
+# 3. Launch the app
+streamlit run app.py
+The app will open in your browser at http://localhost:8501.
+
+💡 Design Decisions
+Why Streamlit?
+Streamlit allows rapid development of data and ML-adjacent web apps purely in Python, removing the need for a separate frontend. This kept the project focused on core logic rather than UI boilerplate.
+Why PyPDF2?
+It is a lightweight, dependency-free pure-Python library well-suited for extracting text from standard PDF resumes without requiring system-level tools.
+Why keep it modular?
+Separating parsing (resume_parser.py) from question generation (interview_engine.py) makes each component independently testable and replaceable — for example, swapping in an LLM-based parser in a future iteration.
+
+🔮 Future Scope
+----------------
+Integrate a large language model (LLM) for more nuanced, context-aware question generation
+Add voice input/output for a fully spoken interview simulation
+Score candidate responses using NLP-based evaluation
+Support for multiple interview types: HR, technical, system design
+Export interview session report as PDF
+
+
+🤝 Contributing
+----------------
+Contributions are welcome! To get started:
+
+Fork the repository
+Create a feature branch: git checkout -b feature/your-feature
+Commit your changes: git commit -m 'Add your feature'
+Push to the branch: git push origin feature/your-feature
+Open a Pull Request
+
+
+📄 License
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+
+ Contact
+---------
+Divyasree K - divyadamodaran3105@gmail.com
+
+
+
+
+
+
+
+
+
+
+
